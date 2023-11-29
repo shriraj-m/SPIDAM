@@ -1,4 +1,4 @@
-#hello
+
 import tkinter as tk
 import numpy as np
 import wave
@@ -21,10 +21,11 @@ print(length)
 
 time = np.linspace(0, length, data.shape[0])
 print(time)
-plt.plot(time, data[:, 0], label="First Channel")
-plt.plot(time, data[:, 1], label="Second Channel")
+plt.plot(time, data, label="First Channel")
+'''
+plt.plot(time, data[:, 1], label="Second Channel")  
 plt.plot(time, data[:, 2], label="Third channel")
-plt.plot(time, data[:, 3], label="Fourth Channel")
+plt.plot(time, data[:, 3], label="Fourth Channel")'''
 plt.legend()
 plt.xlabel("Time [s]")
 plt.ylabel("Amplitude")
