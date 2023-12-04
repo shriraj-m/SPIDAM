@@ -20,22 +20,23 @@ def display_audio(path):
                 plt.plot(time, data[:, x], label=label_title)
 
     # Holds all the possible files for testing and randomly selects a file for testing
-    files = path  # when this is a straight string it works but with tkinter gui it breaks
+    source = path    # when this is a straight string it works but with tkinter gui it breaks
 
-    source = files
     # File used to store converted mp3
     destination = "test.wav"
 
     wav_filename = ""
     # Determines if the file is not a wav and does a mp3 to wav conversion
     # Then associates wav_filename with appropriate filename
-    if source.find(".wav") == -1:
+
+    if source.find(".mp3") != -1:
         sound = AudioSegment.from_mp3(source)
         sound.export(destination, format="wav")
         wav_filename = destination
-    else:
+    elif source.find(".wav") != -1:
         wav_filename = source
-
+    else:
+        print("Gah")
     samplerate, data = wavfile.read(wav_filename)
     length = data.shape[0] / samplerate
 

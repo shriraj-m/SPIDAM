@@ -34,8 +34,11 @@ def select_file():
         title='Selected File',
         message=filename)
 
-    print(f'#1 {selected_file}')
-    display_audio(selected_file)
+    #print(f'#1 {selected_file}')
+    if selected_file.find(".wav") == -1 and selected_file.find(".mp3") == -1:
+        print("Invalid input")
+    else:
+        display_audio(selected_file)
 
 # open button
 open_button = ttk.Button(
