@@ -5,6 +5,7 @@ from pydub import AudioSegment
 
 
 def display_audio(path):
+
     def define_channel_count():
         if len(data.shape) == 1:
             return 1
@@ -46,9 +47,6 @@ def display_audio(path):
 
     time = np.linspace(0, length, data.shape[0])
     plot_labeling(define_channel_count())
-    '''plt.plot(time, data[:, 1], label="Second Channel")
-    plt.plot(time, data[:, 2], label="Third channel")
-    plt.plot(time, data[:, 3], label="Fourth Channel")'''
     plt.legend()
     plt.xlabel("Time [s]")
     plt.ylabel("Amplitude")
