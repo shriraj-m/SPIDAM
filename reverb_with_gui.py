@@ -1,10 +1,13 @@
 import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog as fd
-from tkinter.messagebox import showinfo
 from tkinter import messagebox
 from display_audio_graph import display_audio
-from find_frequency import find_target_frequency
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+from reverb import reverb_implementation
+
 # Creating root window
 root = tk.Tk()
 root.title('Select Audio File.')
@@ -37,8 +40,18 @@ def select_file():
         messagebox.showerror("Invalid File Type", "Error: The file type selected is not supported")
     else:
         display_audio(selected_file)
+        sample_rate, data = wavfile.read(selected_file)
+        if len(data.shape) == 1:
+            spectrum, freq, t, im = plt.specgram(data, Fs=sample_rate, NFFT=1024, cmap=plt.get_cmap('autumn_r'))
+            reverb_implementation(spectrum, freq, t)
 
-# ------------------------------------------------
+        else:
+            channel_count = data.shape[1]
+            for x in range(channel_count):
+                spectrum, freq, t, im = plt.specgram(data[:, x], Fs=sample_rate, NFFT=1024,
+                                                     cmap=plt.get_cmap('autumn_r'))
+                reverb_implementation(spectrum, freq, t)
+
 # open button
 open_button = ttk.Button(
     root,
