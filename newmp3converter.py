@@ -2,7 +2,7 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog as fd
 from tkinter.messagebox import showinfo
-
+from tkinter import messagebox
 from display_audio_graph import display_audio
 
 # Creating root window
@@ -30,13 +30,11 @@ def select_file():
     selected_file = filename
 
     # tkinter.messagebox — Tkinter message prompts
-    showinfo(
-        title='Selected File',
-        message=filename)
+
 
     #print(f'#1 {selected_file}')
     if selected_file.find(".wav") == -1 and selected_file.find(".mp3") == -1:
-        print("Invalid input")
+        messagebox.showerror("Invalid File Type", "Error: The file type selected is not supported")
     else:
         display_audio(selected_file)
 
