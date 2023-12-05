@@ -2,8 +2,9 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import filedialog as fd
 from tkinter.messagebox import showinfo
-'''
+
 # Creating root window
+
 root = tk.Tk()
 root.title('Select Audio File.')
 root.resizable(False, False)
@@ -45,8 +46,8 @@ open_button.pack(expand=True)
 
 # run the application
 root.mainloop()
-'''
-selected_file = "C:/Users/smand/OneDrive/Desktop/GitThings/SPIDAM_project/16bit1chan.wav"
+
+'''selected_file = "C:/Users/smand/OneDrive/Desktop/GitThings/SPIDAM_project/16bit1chan.wav"
 print(selected_file)
 origin = selected_file
 symbol = '/'
@@ -54,3 +55,4 @@ number = origin.find(symbol)
 print(number)
 source = selected_file[number:]
 print(source)
+'''

@@ -18,7 +18,7 @@ def select_file():
     filetypes = (
         ('WAV files', '*.wav'),
         ('MP3 files', '*.mp3'),
-        ('All files', '*.*')
+        ('All Files', '*.*')
     )
 
     filename = fd.askopenfilename(

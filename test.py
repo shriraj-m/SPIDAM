@@ -20,7 +20,7 @@ def plot_labeling(channel_count):
             plt.plot(time, data[:, x], label=label_title)
 
 
-wav_filename = "16bit4chan.wav"
+wav_filename = "16bit1chan.wav"
 samplerate, data = wavfile.read(wav_filename)
 length = data.shape[0] / samplerate
 
