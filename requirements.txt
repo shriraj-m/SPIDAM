@@ -20,3 +20,7 @@ typing_extensions==4.8.0
 urllib3==2.1.0
 uvicorn==0.23.2
 yarg==0.1.9
+
+numpy~=1.26.2
+matplotlib~=3.8.2
+scipy~=1.11.4
