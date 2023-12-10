@@ -7,7 +7,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolb
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.io import wavfile
-from find_frequency import find_target_frequency
+from find_target_frequency import target_frequency
 from scipy.signal import welch
 
 # Creating root window
@@ -191,7 +191,7 @@ def reverb_implementation(spectrum, freq, t, color, label_value):
     def frequency_check():
         # identify a frequency to check
         global target_frequency
-        target_frequency = find_target_frequency(freq)
+        target_frequency = target_frequency(freq)
         index_of_frequency = np.where(freq == target_frequency)[0][0]  # find sound data for a particular frequency
         data_for_frequency = spectrum[index_of_frequency]
         # change a digital signal for a values in decibels
