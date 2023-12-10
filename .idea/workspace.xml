@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="007a2de6-121f-44be-86dd-f7f06e0dd2a4" name="Changes" comment="updated other files">
+      <change afterPath="$PROJECT_DIR$/find_target_frequency.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spidam_program.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/reverb_implementation.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2Z5CPRmE7S3u7l5h5yFQ67qg8fJ" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Python.reverb_testing">
+    <configuration name="reverb_testing" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="SPIDAM_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reverb_testing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="reverb_with_gui" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="SPIDAM_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.9" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/reverb_with_gui.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="007a2de6-121f-44be-86dd-f7f06e0dd2a4" name="Changes" comment="" />
+      <created>1701702530722</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701702530722</updated>
+      <workItem from="1701702539178" duration="119000" />
+      <workItem from="1701702725793" duration="192000" />
+      <workItem from="1701702931792" duration="6000" />
+      <workItem from="1701702972643" duration="1956000" />
+      <workItem from="1701712595060" duration="3481000" />
+      <workItem from="1701809646485" duration="1309000" />
+      <workItem from="1701810982369" duration="4640000" />
+      <workItem from="1701875453332" duration="7877000" />
+      <workItem from="1702096258636" duration="9243000" />
+      <workItem from="1702152486525" duration="132000" />
+      <workItem from="1702229242909" duration="350000" />
+      <workItem from="1702229614391" duration="17593000" />
+      <workItem from="1702247345395" duration="149000" />
+      <workItem from="1702247581315" duration="289000" />
+      <workItem from="1702247908015" duration="829000" />
+      <workItem from="1702249202642" duration="324000" />
+    </task>
+    <task id="LOCAL-00001" summary="small changes with format">
+      <option name="closed" value="true" />
+      <created>1701702626318</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701702626318</updated>
+    </task>
+    <task id="LOCAL-00002" summary="created select_audio_file">
+      <option name="closed" value="true" />
+      <created>1701712667416</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701712667416</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new testing file for mp3 converter">
+      <option name="closed" value="true" />
+      <created>1701713274407</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701713274407</updated>
+    </task>
+    <task id="LOCAL-00004" summary="new testing with gui and asking for file input while also printing the wave graph">
+      <option name="closed" value="true" />
+      <created>1701715041515</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701715041515</updated>
+    </task>
+    <task id="LOCAL-00005" summary="updated method for displaying audio graphs using code from test.py">
+      <option name="closed" value="true" />
+      <created>1701715651682</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1701715651682</updated>
+    </task>
+    <task id="LOCAL-00006" summary="created file to display the reverb and specgram graphs for each channel depending on the amount of channels the audio file has.">
+      <option name="closed" value="true" />
+      <created>1701814829578</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814829578</updated>
+    </task>
+    <task id="LOCAL-00007" summary="removed comments">
+      <option name="closed" value="true" />
+      <created>1701814970490</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814970490</updated>
+    </task>
+    <task id="LOCAL-00008" summary="created new file to calculate frequency">
+      <option name="closed" value="true" />
+      <created>1701815006907</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701815006907</updated>
+    </task>
+    <task id="LOCAL-00009" summary="created new prototype file for using reverb file with gui capabilities">
+      <option name="closed" value="true" />
+      <created>1701815089850</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701815089850</updated>
+    </task>
+    <task id="LOCAL-00010" summary="created reverb file to seperate where reverb is calulcated. changed reverb_testing file to simply use the base information from the reverb file depending on different circumstances">
+      <option name="closed" value="true" />
+      <created>1701815285399</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701815285399</updated>
+    </task>
+    <task id="LOCAL-00011" summary="merged reverb_testing and newmp3converter files to have gui implementation within the reverb accessibility">
+      <option name="closed" value="true" />
+      <created>1701815643135</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701815643135</updated>
+    </task>
+    <task id="LOCAL-00012" summary="MAJOR CHANGES. main program is reverb_with_gui">
+      <option name="closed" value="true" />
+      <created>1702246335653</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1702246335653</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added program to display last 3 graphs">
+      <option name="closed" value="true" />
+      <created>1702247381094</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702247381094</updated>
+    </task>
+    <task id="LOCAL-00014" summary="updated other files">
+      <option name="closed" value="true" />
+      <created>1702247782403</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1702247782403</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="small changes with format" />
+    <MESSAGE value="created select_audio_file" />
+    <MESSAGE value="new testing file for mp3 converter" />
+    <MESSAGE value="new testing with gui and asking for file input while also printing the wave graph" />
+    <MESSAGE value="updated method for displaying audio graphs using code from test.py" />
+    <MESSAGE value="created file to display the reverb and specgram graphs for each channel depending on the amount of channels the audio file has." />
+    <MESSAGE value="removed comments" />
+    <MESSAGE value="created new file to calculate frequency" />
+    <MESSAGE value="created new prototype file for using reverb file with gui capabilities" />
+    <MESSAGE value="created reverb file to seperate where reverb is calulcated. changed reverb_testing file to simply use the base information from the reverb file depending on different circumstances" />
+    <MESSAGE value="merged reverb_testing and newmp3converter files to have gui implementation within the reverb accessibility" />
+    <MESSAGE value="MAJOR CHANGES. main program is reverb_with_gui" />
+    <MESSAGE value="added program to display last 3 graphs" />
+    <MESSAGE value="updated other files" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated other files" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SPIDAM_project$select_audio_file.coverage" NAME="select_audio_file Coverage Results" MODIFIED="1701713628652" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SPIDAM_project$reverb_with_gui.coverage" NAME="reverb_with_gui Coverage Results" MODIFIED="1702247636533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SPIDAM_project$reverb_testing.coverage" NAME="reverb_testing Coverage Results" MODIFIED="1701814394511" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SPIDAM_project$mp3Conver.coverage" NAME="mp3Conver Coverage Results" MODIFIED="1701713558940" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SPIDAM_project$newmp3converter.coverage" NAME="newmp3converter Coverage Results" MODIFIED="1702247629867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SPIDAM_project$test.coverage" NAME="test Coverage Results" MODIFIED="1701715454073" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/SPIDAM_project$reverb.coverage" NAME="reverb Coverage Results" MODIFIED="1701885643531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>

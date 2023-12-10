@@ -1,0 +1,140 @@
+Index: newmp3converter.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import tkinter as tk\r\nfrom tkinter import ttk\r\nfrom tkinter import filedialog as fd\r\nfrom tkinter.messagebox import showinfo\r\n\r\nfrom display_audio_graph import display_audio\r\n\r\n# Creating root window\r\nroot = tk.Tk()\r\nroot.title('Select Audio File.')\r\nroot.resizable(False, False)\r\nroot.geometry('300x150')\r\n\r\nselected_file = \"\"\r\n\r\n\r\ndef select_file():\r\n    filetypes = (\r\n        ('WAV files', '*.wav'),\r\n        ('MP3 files', '*.mp3'),\r\n        ('All files', '*.*')\r\n    )\r\n\r\n    filename = fd.askopenfilename(\r\n        title='Open a File',\r\n        initialdir='/',\r\n        filetypes=filetypes)\r\n\r\n    # Holds the path of the selected file.\r\n    selected_file = filename\r\n\r\n    # tkinter.messagebox — Tkinter message prompts\r\n    showinfo(\r\n        title='Selected File',\r\n        message=filename)\r\n\r\n    print(f'#1 {selected_file}')\r\n    display_audio(selected_file)\r\n\r\n# open button\r\nopen_button = ttk.Button(\r\n    root,\r\n    text='Open a File',\r\n    command=select_file\r\n)\r\nopen_button.pack(expand=True)\r\nexit_button = ttk.Button(\r\n    root,\r\n    text=\"EXIT\",\r\n    command=root.destroy\r\n)\r\nexit_button.pack()\r\n\r\n# run the application\r\nroot.mainloop()\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/newmp3converter.py b/newmp3converter.py
+--- a/newmp3converter.py	(revision a8200fb5928851e74fae3074b3243769e2fc7e6d)
++++ b/newmp3converter.py	(date 1701715995307)
+@@ -17,8 +17,7 @@
+ def select_file():
+     filetypes = (
+         ('WAV files', '*.wav'),
+-        ('MP3 files', '*.mp3'),
+-        ('All files', '*.*')
++        ('MP3 files', '*.mp3')
+     )
+ 
+     filename = fd.askopenfilename(
+Index: select_audio_file.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import tkinter as tk\r\nfrom tkinter import ttk\r\nfrom tkinter import filedialog as fd\r\nfrom tkinter.messagebox import showinfo\r\n'''\r\n# Creating root window\r\nroot = tk.Tk()\r\nroot.title('Select Audio File.')\r\nroot.resizable(False, False)\r\nroot.geometry('300x150')\r\n\r\nselected_file = \"\"\r\n\r\n\r\ndef select_file():\r\n    filetypes = (\r\n        ('WAV files', '*.wav'),\r\n        ('MP3 files', '*.mp3'),\r\n        ('All files', '*.*')\r\n    )\r\n\r\n    filename = fd.askopenfilename(\r\n        title='Open a File',\r\n        initialdir='/',\r\n        filetypes=filetypes)\r\n\r\n    # Holds the path of the selected file.\r\n    selected_file = filename\r\n\r\n    # tkinter.messagebox — Tkinter message prompts\r\n    showinfo(\r\n        title='Selected File',\r\n        message=filename)\r\n\r\n    print(selected_file)\r\n\r\n\r\n# open button\r\nopen_button = ttk.Button(\r\n    root,\r\n    text='Open a File',\r\n    command=select_file\r\n)\r\nopen_button.pack(expand=True)\r\n\r\n# run the application\r\nroot.mainloop()\r\n'''\r\nselected_file = \"C:/Users/smand/OneDrive/Desktop/GitThings/SPIDAM_project/16bit1chan.wav\"\r\nprint(selected_file)\r\norigin = selected_file\r\nsymbol = '/'\r\nnumber = origin.find(symbol)\r\nprint(number)\r\nsource = selected_file[number:]\r\nprint(source)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/select_audio_file.py b/select_audio_file.py
+--- a/select_audio_file.py	(revision a8200fb5928851e74fae3074b3243769e2fc7e6d)
++++ b/select_audio_file.py	(date 1701714171215)
+@@ -2,8 +2,9 @@
+ from tkinter import ttk
+ from tkinter import filedialog as fd
+ from tkinter.messagebox import showinfo
+-'''
++
+ # Creating root window
++
+ root = tk.Tk()
+ root.title('Select Audio File.')
+ root.resizable(False, False)
+@@ -45,8 +46,8 @@
+ 
+ # run the application
+ root.mainloop()
+-'''
+-selected_file = "C:/Users/smand/OneDrive/Desktop/GitThings/SPIDAM_project/16bit1chan.wav"
++
++'''selected_file = "C:/Users/smand/OneDrive/Desktop/GitThings/SPIDAM_project/16bit1chan.wav"
+ print(selected_file)
+ origin = selected_file
+ symbol = '/'
+@@ -54,3 +55,4 @@
+ print(number)
+ source = selected_file[number:]
+ print(source)
++'''
+\ No newline at end of file
+Index: mp3Conver.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import tkinter as tk\r\nimport numpy as np\r\nimport wave\r\nimport sys\r\nimport matplotlib.pyplot as plt\r\nfrom scipy.io import wavfile\r\nimport scipy.io\r\nfrom os import path\r\nfrom pydub import AudioSegment\r\nimport random\r\n\r\nrandom.seed(None, 2)\r\n# Holds all the possible files for testing and randomly selects a file for testing\r\nfiles = [\"16bit1chan.wav\", \"16bit2chan.wav\", \"16bit4chan.wav\", \"conver.mp3\"]\r\nindex = random.randint(0, files.__len__() - 1)\r\nsource = files[index]\r\n# File used to store converted mp3\r\ndestination = \"test.wav\"\r\n\r\nwav_filename = \"\"\r\n# Determines if the file is not a wav and does a mp3 to wav conversion\r\n# Then associates wav_filename with appropriate filename\r\nif source.find(\".wav\") == -1:\r\n    sound = AudioSegment.from_mp3(source)\r\n    sound.export(destination, format=\"wav\")\r\n    wav_filename = destination\r\nelse:\r\n    wav_filename = source\r\n\r\nsamplerate, data = wavfile.read(wav_filename)\r\n# print(data.shape[len(data.shape) - 1])\r\n# print(samplerate)\r\nlength = data.shape[0] / samplerate\r\n# print(length)\r\n\r\n# 1chan: 101430, 44100, 2.3s\r\n# 2chan: 2, 44100, 0.4658s\r\n# 4chan: 4, 44100, 2.3s\r\n\r\ntime = np.linspace(0, length, data.shape[0])\r\n# print(time)\r\nplt.plot(time, data, label=\"First Channel\")\r\nplt.legend()\r\nplt.xlabel(\"Time [s]\")\r\nplt.ylabel(\"Amplitude\")\r\nplt.show()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/mp3Conver.py b/mp3Conver.py
+--- a/mp3Conver.py	(revision a8200fb5928851e74fae3074b3243769e2fc7e6d)
++++ b/mp3Conver.py	(date 1701713621756)
+@@ -7,13 +7,13 @@
+ import scipy.io
+ from os import path
+ from pydub import AudioSegment
+-import random
++
+ 
+-random.seed(None, 2)
++
+ # Holds all the possible files for testing and randomly selects a file for testing
+-files = ["16bit1chan.wav", "16bit2chan.wav", "16bit4chan.wav", "conver.mp3"]
+-index = random.randint(0, files.__len__() - 1)
+-source = files[index]
++files = "C:/Users/smand/OneDrive/Desktop/GitThings/SPIDAM_project/16bit1chan.wav"   # "conver.mp3"
++
++source = files
+ # File used to store converted mp3
+ destination = "test.wav"
+ 
+@@ -28,15 +28,7 @@
+     wav_filename = source
+ 
+ samplerate, data = wavfile.read(wav_filename)
+-# print(data.shape[len(data.shape) - 1])
+-# print(samplerate)
+ length = data.shape[0] / samplerate
+-# print(length)
+-
+-# 1chan: 101430, 44100, 2.3s
+-# 2chan: 2, 44100, 0.4658s
+-# 4chan: 4, 44100, 2.3s
+-
+ time = np.linspace(0, length, data.shape[0])
+ # print(time)
+ plt.plot(time, data, label="First Channel")
+Index: test.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># import tkinter as tk\r\nimport numpy as np\r\nimport matplotlib.pyplot as plt\r\nfrom scipy.io import wavfile\r\n\r\n\r\ndef define_channel_count():\r\n    if len(data.shape) == 1:\r\n        return 1\r\n    else:\r\n        return data.shape[1]\r\n\r\n\r\ndef plot_labeling(channel_count):\r\n    if channel_count == 1:\r\n        plt.plot(time, data, label=\"Channel 1\")\r\n    elif channel_count > 1:\r\n        for x in range(channel_count):\r\n            label_title = f'Channel {x+1}'\r\n            plt.plot(time, data[:, x], label=label_title)\r\n\r\n\r\nwav_filename = \"16bit4chan.wav\"\r\nsamplerate, data = wavfile.read(wav_filename)\r\nlength = data.shape[0] / samplerate\r\n\r\n# 1chan: 101430, 44100, 2.3s\r\n# 2chan: 2, 44100, 0.4658s\r\n# 4chan: 4, 44100, 2.3s\r\n\r\ntime = np.linspace(0, length, data.shape[0])\r\nplot_labeling(define_channel_count())\r\n'''plt.plot(time, data[:, 1], label=\"Second Channel\")\r\nplt.plot(time, data[:, 2], label=\"Third channel\")\r\nplt.plot(time, data[:, 3], label=\"Fourth Channel\")'''\r\nplt.legend()\r\nplt.xlabel(\"Time [s]\")\r\nplt.ylabel(\"Amplitude\")\r\nplt.show()\r\n\r\n\r\n\r\n'''\r\nspectrum, freqs, t, im = plt.specgram(data, Fs=sample_rate, NFFT=1024, cmap=plt.get_cmap('autumn_r'))\r\n# select a frequency under 1kHz\r\ndef find_target_frequency(freqs):\r\n    for x in freqs:\r\n        if x > 1000:\r\n            break\r\n        return x\r\n\r\n\r\ndef frequency_check():\r\n    # identify a frequency to check\r\n    global target_frequency\r\n    target_frequency = find_target_frequency(freqs)\r\n    index_of_frequency = np.where(freqs == target_frequency)[0][0]\r\n    # find sound data for a particular frequency\r\n    data_for_frequency = spectrum[index_of_frequency]\r\n    # change a digital signal for a values in decibels\r\n    data_in_db_fun = 10 * np.log10(data_for_frequency)\r\n    return data_in_db_fun\r\n\r\n\r\ndata_in_db = frequency_check()\r\nplt.figure(2)\r\nplt.plot(t, data_in_db, linewidth=1, alpha=0.7, color=\"#004bc6\")\r\nplt.xlabel(\"Time (s)\")\r\nplt.ylabel(\"Power (dB)\")\r\n\r\n# find a index of a max value\r\nindex_of_max = np.argmax(data_in_db)\r\nvalue_of_max = data_in_db[index_of_max]\r\nplt.plot(t[index_of_max], data_in_db[index_of_max], 'go')\r\n\r\n# slice our array from a max value\r\nsliced_array = data_in_db[index_of_max:]\r\nvalue_of_max_less_5 = value_of_max - 5\r\n\r\n\r\n# find nearest value of less 5db\r\ndef find_nearest_value(array, value):\r\n    array = np.asarray(array)\r\n    idx = (np.abs(array - value)).argmin()\r\n    return array[idx]\r\n\r\n\r\nvalue_of_max_less_5 = find_nearest_value(sliced_array, value_of_max_less_5)\r\nindex_of_max_less_5 = np.where(data_in_db == value_of_max_less_5)\r\nplt.plot(t[index_of_max_less_5], data_in_db[index_of_max_less_5], 'yo')\r\n\r\n# slice array from a max -5db\r\nvalue_of_max_less_25 = value_of_max - 25\r\nvalue_of_max_less_25 = find_nearest_value(sliced_array, value_of_max_less_25)\r\nindex_of_max_less_25 = np.where(data_in_db == value_of_max_less_25)\r\nplt.plot(t[index_of_max_less_25], data_in_db[index_of_max_less_25], 'ro')\r\n\r\nrt20 = (t[index_of_max_less_5] - t[index_of_max_less_25])[0]\r\nprint(f'rt20= {rt20}')\r\nrt60 = 3*rt20\r\n#plt.xlim(0, ((round(abs(rt60), 2)) * 1.5))\r\nplt.grid()\r\nplt.show()\r\nprint(f'The RT60 reverb time at freq {int(target_frequency)}Hz is {round(abs(rt60), 2)} seconds')\r\n\r\n'''\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/test.py b/test.py
+--- a/test.py	(revision a8200fb5928851e74fae3074b3243769e2fc7e6d)
++++ b/test.py	(date 1701715453048)
+@@ -20,7 +20,7 @@
+             plt.plot(time, data[:, x], label=label_title)
+ 
+ 
+-wav_filename = "16bit4chan.wav"
++wav_filename = "16bit1chan.wav"
+ samplerate, data = wavfile.read(wav_filename)
+ length = data.shape[0] / samplerate
+ 
+Index: display_audio_graph.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import numpy as np\r\nimport matplotlib.pyplot as plt\r\nfrom scipy.io import wavfile\r\nfrom pydub import AudioSegment\r\n\r\n\r\ndef display_audio(path):\r\n    def define_channel_count():\r\n        if len(data.shape) == 1:\r\n            return 1\r\n        else:\r\n            return data.shape[1]\r\n\r\n    def plot_labeling(channel_count):\r\n        if channel_count == 1:\r\n            plt.plot(time, data, label=\"Channel 1\")\r\n        elif channel_count > 1:\r\n            for x in range(channel_count):\r\n                label_title = f'Channel {x + 1}'\r\n                plt.plot(time, data[:, x], label=label_title)\r\n\r\n    # Holds all the possible files for testing and randomly selects a file for testing\r\n    files = path  # when this is a straight string it works but with tkinter gui it breaks\r\n\r\n    source = files\r\n    # File used to store converted mp3\r\n    destination = \"test.wav\"\r\n\r\n    wav_filename = \"\"\r\n    # Determines if the file is not a wav and does a mp3 to wav conversion\r\n    # Then associates wav_filename with appropriate filename\r\n    if source.find(\".wav\") == -1:\r\n        sound = AudioSegment.from_mp3(source)\r\n        sound.export(destination, format=\"wav\")\r\n        wav_filename = destination\r\n    else:\r\n        wav_filename = source\r\n\r\n    samplerate, data = wavfile.read(wav_filename)\r\n    length = data.shape[0] / samplerate\r\n\r\n    # 1chan: 101430, 44100, 2.3s\r\n    # 2chan: 2, 44100, 0.4658s\r\n    # 4chan: 4, 44100, 2.3s\r\n\r\n    time = np.linspace(0, length, data.shape[0])\r\n    plot_labeling(define_channel_count())\r\n    '''plt.plot(time, data[:, 1], label=\"Second Channel\")\r\n    plt.plot(time, data[:, 2], label=\"Third channel\")\r\n    plt.plot(time, data[:, 3], label=\"Fourth Channel\")'''\r\n    plt.legend()\r\n    plt.xlabel(\"Time [s]\")\r\n    plt.ylabel(\"Amplitude\")\r\n    plt.show()\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/display_audio_graph.py b/display_audio_graph.py
+--- a/display_audio_graph.py	(revision a8200fb5928851e74fae3074b3243769e2fc7e6d)
++++ b/display_audio_graph.py	(date 1701715995296)
+@@ -5,6 +5,7 @@
+ 
+ 
+ def display_audio(path):
++
+     def define_channel_count():
+         if len(data.shape) == 1:
+             return 1
