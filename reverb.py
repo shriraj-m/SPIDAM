@@ -1,14 +1,36 @@
+from scipy.io import wavfile
 from find_frequency import find_target_frequency
 import numpy as np
 import matplotlib.pyplot as plt
 
+colors = ["c", "m", "b", "r"]
 
-def reverb_implementation(spectrum, freq, t):
+
+def run(file_path):
+    sample_rate, data = wavfile.read(file_path)
+    if len(data.shape) == 1:
+        spectrum, freq, t, im = plt.specgram(data, Fs=sample_rate, NFFT=1024, cmap=plt.get_cmap('autumn_r'))
+        reverb_implementation(spectrum, freq, t, colors[1], label_value=1, channels=1)
+
+    else:
+        channel_count = data.shape[1]
+        for x in range(channel_count):
+            spectrogram = plt.figure()
+            spec = spectrogram.add_subplot(111)
+            spectrum, freq, t, im = spec.specgram(data[:, x], Fs=sample_rate, NFFT=1024, cmap=plt.get_cmap('autumn_r'))
+            spectrogram.show()  # shows first spectrogram plot.
+            label_string = f'Channel {x + 1}'
+            reverb_implementation(spectrum, freq, t, colors[x], label_value=label_string, channels=channel_count)
+        plt.show()
+
+
+
+def reverb_implementation(spectrum, freq, t, color, label_value, channels):
     def frequency_check():
         # identify a frequency to check
         global target_frequency
         target_frequency = find_target_frequency(freq)
-        index_of_frequency = np.where(freq == target_frequency)[0][0]            # find sound data for a particular frequency
+        index_of_frequency = np.where(freq == target_frequency)[0][0]  # find sound data for a particular frequency
         data_for_frequency = spectrum[index_of_frequency]
         # change a digital signal for a values in decibels
         data_in_db_fun = 10 * np.log10(data_for_frequency)
@@ -16,9 +38,11 @@ def reverb_implementation(spectrum, freq, t):
 
     data_in_db = frequency_check()
     plt.figure(2)
-    plt.plot(t, data_in_db, linewidth=1, alpha=0.7, color="#004bc6")
+    # reverb line
+    plt.plot(t, data_in_db, color=color, linewidth=1, alpha=0.7, label=label_value)
     plt.xlabel("Time (s)")
     plt.ylabel("Power (dB)")
+    plt.legend()
 
     # find an index of a max value
     index_of_max = np.argmax(data_in_db)
@@ -48,7 +72,5 @@ def reverb_implementation(spectrum, freq, t):
     rt20 = (t[index_of_max_less_5] - t[index_of_max_less_25])[0]
     print(f'rt20= {rt20}')
     rt60 = 3 * rt20
-    # plt.xlim(0, ((round(abs(rt60), 2)) * 1.5))
-    plt.grid()
-    plt.show()
     print(f'The RT60 reverb time at freq {int(target_frequency)}Hz is {round(abs(rt60), 2)} seconds')
+    plt.grid()

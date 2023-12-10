@@ -18,7 +18,7 @@ def display_audio(path):
         elif channel_count > 1:
             for x in range(channel_count):
                 label_title = f'Channel {x + 1}'
-                plt.plot(time, data[:, x], label=label_title)
+                base_graph.plot(time, data[:, x], label=label_title)
 
     # Holds all the possible files for testing and randomly selects a file for testing
     source = path    # when this is a straight string it works but with tkinter gui it breaks
@@ -37,7 +37,7 @@ def display_audio(path):
     elif source.find(".wav") != -1:
         wav_filename = source
     else:
-        print("Gah")
+        print("uhoh")
     samplerate, data = wavfile.read(wav_filename)
     length = data.shape[0] / samplerate
 
@@ -46,8 +46,10 @@ def display_audio(path):
     # 4chan: 4, 44100, 2.3s
 
     time = np.linspace(0, length, data.shape[0])
+    wave_graph = plt.figure()
+    base_graph = wave_graph.add_subplot(111)
     plot_labeling(define_channel_count())
     plt.legend()
     plt.xlabel("Time [s]")
     plt.ylabel("Amplitude")
-    plt.show()
+    wave_graph.show()
