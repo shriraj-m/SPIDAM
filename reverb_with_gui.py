@@ -122,10 +122,48 @@ def select_file():
     else:
         display_audio(selected_file)
         run(selected_file)
+        plot_frequency_band("low")
+        plot_frequency_band("mid")
+        plot_frequency_band("high")
 
 
 colors = ["c", "m", "b", "r"]
 
+
+def plot_frequency_band(type_of_freq):
+    sample_rate, data = wavfile.read(selected_file)
+
+    # Perform FFT
+    n = len(data)
+    fft_result = np.fft.fft(data)
+    frequencies = np.fft.fftfreq(n, d=1 / sample_rate)
+
+    # Define frequency bands
+    low_cutoff = 20
+    mid_cutoff = 2000
+    high_cutoff = 20000
+
+    # Index of frequency bands
+    low_indices = np.where((frequencies >= 0) & (frequencies < low_cutoff))
+    mid_indices = np.where((frequencies >= low_cutoff) & (frequencies < mid_cutoff))
+    high_indices = np.where((frequencies >= mid_cutoff) & (frequencies < high_cutoff))
+
+    # Plot selected frequency band
+    figure4 = plt.figure(figsize=(8, 4))
+    ax4 = figure4.add_subplot(111)
+
+    if type_of_freq == "low":
+        ax4.plot(frequencies[low_indices], np.abs(fft_result[low_indices]), label='Low Frequency')
+    elif type_of_freq == "mid":
+        ax4.plot(frequencies[mid_indices], np.abs(fft_result[mid_indices]),  label='Mid Frequency')
+    elif type_of_freq == "high":
+        ax4.plot(frequencies[high_indices], np.abs(fft_result[high_indices]), label='High Frequency')
+
+    ax4.set_xlabel('Frequency (Hz)')
+    ax4.set_ylabel('Amplitude')
+    ax4.set_title(f'{type_of_freq} Frequency')
+    ax4.legend()
+    plt.show()
 
 def run(given_file):
     ax2.clear()
